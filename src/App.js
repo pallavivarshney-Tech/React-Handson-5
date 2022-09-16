@@ -1,5 +1,6 @@
 import './App.css';
 import React,{useRef,useState} from 'react'
+import ProductList from './Component/ProductList';
 
 function App() {
   return (
@@ -13,8 +14,10 @@ Higher-Order Components are not part of the React API. They are the pattern that
       <br/>
      However, they have to render some UI. In such a case, React hooks seem to be a perfect mechanism for code reuse. Hence, HOCs are inconvenient when you want to share some non-visual logic. In such a case, React hooks seem to be a perfect mechanism for code reuse.
      <br/>
+     <ProductList/>
      <h1>Pure Components</h1>A React component is considered pure if it renders the same output for the same state and props. For this type of class component, React provides the PureComponent base class. Class components that extend the React.
      <br/>
+    
 
 PureComponent Is Primarily Used for Performance Optimization. <br/> As outlined in the React docs: If your React component's render() function renders the same result given the same props and state, you can use React. PureComponent for a performance boost in some cases.
      
@@ -25,6 +28,7 @@ PureComponent Is Primarily Used for Performance Optimization. <br/> As outlined 
       <HOCRed cmp={Counter}/>
       <HOCGreen cmp={Counter}/>
       <HOCBlue cmp={Counter}/>
+    
 
 </div>
   );
